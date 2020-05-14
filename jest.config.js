@@ -4,7 +4,7 @@
 module.exports = {
   // A list of paths to directories that Jest should use to search for files in
   roots: [
-    '<rootDir>/scr'
+    '<rootDir>/src'
   ],
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
