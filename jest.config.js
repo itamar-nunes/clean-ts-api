@@ -18,8 +18,18 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '.+\\.ts$': 'ts-jest'
-  }
+    '^.+\\.ts$': 'ts-jest'
+  },
+
+  // An array of file extensions your modules use
+  moduleFileExtensions: [
+    'js',
+    'json',
+    'jsx',
+    'ts',
+    'tsx',
+    'node'
+  ]
 
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -76,16 +86,6 @@ module.exports = {
   // An array of directory names to be searched recursively up from the requiring module's location
   // moduleDirectories: [
   //   "node_modules"
-  // ],
-
-  // An array of file extensions your modules use
-  // moduleFileExtensions: [
-  //   "js",
-  //   "json",
-  //   "jsx",
-  //   "ts",
-  //   "tsx",
-  //   "node"
   // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
