@@ -4,7 +4,7 @@ export class SignUpController {
   handle (httpRequest: HttpRequest): HttpResponse {
     if (!httpRequest.body.name) {
       return {
-        statusCode: 40000,
+        statusCode: 4000,
         body: new Error('Missign param: name')
       }
     }
