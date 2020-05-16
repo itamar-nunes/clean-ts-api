@@ -21,7 +21,7 @@
         "project": "./tsconfig.json"
     },
     "plugins": [
-        // "vue"
+        "vue"
         // "@typescript-eslint"
     ],
     "rules": {
