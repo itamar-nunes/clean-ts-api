@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest --passWithNoTests --silent --runInBand",
     "test:verbose": "jest --passWithNoTests --runInBand",
-    "test:unit": "npm teste -- --watch -c jest-unit-config.js", 
-    "test:integration": "npm teste -- --watch -c jest-integration-config.js", 
+    "test:unit": "npm teste -- --watch -c jest-unit-config.js",
+    "test:integration": "npm teste -- --watch -c jest-integration-config.js",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage"
   },
@@ -16,6 +16,7 @@
   "devDependencies": {
     "@types/jest": "^25.2.2",
     "@types/node": "^14.0.1",
+    "@types/validator": "^13.0.0",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "eslint": "^6.8.0",
@@ -31,5 +32,8 @@
     "lint-staged": "^10.2.2",
     "ts-jest": "^25.5.1",
     "typescript": "^3.9.2"
+  },
+  "dependencies": {
+    "validator": "^13.0.0"
   }
 }
