@@ -16,5 +16,11 @@ export const MongoHelper = {
 
   getCollection (name: string): Collection {
     return this.client.db().Collection(name)
+  },
+
+  mapMongoToObject: (collection: any): any => {
+    // MongoDB retorna um id com _ na frente: _id. Mas nós queremos uma propriedade com o nome de id
+    const { _id, ...collectionWithouId } = collection
+    return Object.assign({}, collectionWithouId, { id: _id })
   }
 }

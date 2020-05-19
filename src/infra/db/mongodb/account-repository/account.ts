@@ -7,10 +7,7 @@ export class AccountMongoRepository implements AddAccountRepository {
   async add (accountData: AddAccountModel): Promise<AccountModel> {
     const accountCollection = MongoHelper.getCollection('accounts')
     const result = await accountCollection.insertOne(accountData)
-    const account = result.ops[0]
 
-    // MongoDB retorna um id com _ na frente: _id. Mas nós queremos uma propriedade com o nome de id
-    const { _id, ...accountWithoudId } = account
-    return Object.assign({}, accountWithoudId, { id: _id })
+    return MongoHelper.mapMongoToObject(result.ops[0])
   }
 }
