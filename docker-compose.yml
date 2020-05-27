@@ -13,11 +13,19 @@ services:
     build: .
     restart: always
     image: clean-node-api
-    command: npm start
+    # command: npm start
+    # Rodando em modo debug para conseguir usar o TypeScript mapeando o JS
+    command: npm run debug
     volumes:
+      # Garantindo que as coisas serão copiadas para o Container do Docker.
+      # Pois as vezes o comando COPY do Dockerfile falha ao copiar.
       - ./dist:/usr/src/clean-node-api/dist
+      - ./package.json:/usr/src/clean-node-api/package.json
     ports: 
       - "5050:5050"
+      # Porta para habilitar o TypeScript Debug. Para ele enxergar os arquivos fontes do TypeScript. 
+      # Veja mais em Package.json - "debug": "node --inspect=0.0.0.0:9222 --nolazy dist/main/server.js"
+      - "9222:9222"
     links: 
       - mongo
       
