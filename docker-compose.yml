@@ -20,7 +20,8 @@ services:
     volumes: 
       # Garantindo que as coisas serão copiadas para o Container do Docker.
       # Pois as vezes o comando COPY do Dockerfile falha ao copiar.
-      - ./dist:/usr/src/clean-node-api/dist
+      # Nota: Não use ./dist use ./dist/ com a bara no final /
+      - ./dist/:/usr/src/clean-node-api/dist
       - ./package.json:/usr/src/clean-node-api/package.json
     ports: 
       - "5050:5050"
@@ -43,7 +44,8 @@ services:
   #   volumes:
   #     # Garantindo que as coisas serão copiadas para o Container do Docker.
   #     # Pois as vezes o comando COPY do Dockerfile falha ao copiar.
-  #     - ./dist:/usr/src/clean-node-api/dist
+  #     # Nota: Não use ./dist use ./dist/ com a bara no final /
+  #     - ./dist/:/usr/src/clean-node-api/dist
   #     - ./package.json:/usr/src/clean-node-api/package.json
   #   ports: 
   #     - "5050:5050"
