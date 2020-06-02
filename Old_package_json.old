@@ -18,6 +18,8 @@
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
     "//": "******* && coveralls < coverage/lcov.info - Is removed on original file *******",
+    "//": "******* https://coveralls.io *******",
+    "//": "*******  https://travis-ci.com *******",
     "test:coveralls": "npm run ci && coveralls < coverage/lcov.info"
   },
   "author": "",
