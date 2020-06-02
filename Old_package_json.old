@@ -17,6 +17,7 @@
     "test:integration": "npm teste -- --watch -c jest-integration-config.js",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
+    "//": "******* && coveralls < coverage/lcov.info - Is removed on original file *******",
     "test:coveralls": "npm run ci && coveralls < coverage/lcov.info"
   },
   "author": "",
