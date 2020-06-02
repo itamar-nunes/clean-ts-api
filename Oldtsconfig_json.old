@@ -6,6 +6,7 @@
         "esModuleInterop": true,
         "allowJs": true,
         "sourceMap": true,
+        // Pasta pardrão para quando rodar o "tsc -w" para que o TypeScript assista somente dentro da pasta "src"
         "rootDir": "src"
     },
     "include": [
