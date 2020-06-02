@@ -1,7 +1,7 @@
 {
   "name": "clean-node-api",
   "version": "1.3.0",
-  "description": "",
+  "description": "Clean Architecture API example",
   "main": "index.js",
   "scripts": {
     "start": "node dist/main/server.js",
