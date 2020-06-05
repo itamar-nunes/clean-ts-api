@@ -17,6 +17,8 @@ services:
     # Para executar mais de um comando no Docker Compose precisa usar o "bash"
     # Rodando em modo debug para conseguir usar o TypeScript mapeando o JS
     command: bash -c "npm install --only=prod && npm run debug"
+    environment: 
+      - MONGO_URL=mongodb://mongo:27017/clean-node-api
     volumes: 
       # Garantindo que as coisas serão copiadas para o Container do Docker.
       # Pois as vezes o comando COPY do Dockerfile falha ao copiar.
