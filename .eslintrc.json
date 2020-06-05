@@ -20,6 +20,7 @@
     ],
     "rules": {
         "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/consistent-type-definitions": "off",
         "no-unused-vars": ["error", { "vars": "all", "args": "none", "ignoreRestSiblings": false }]
     }
 }
