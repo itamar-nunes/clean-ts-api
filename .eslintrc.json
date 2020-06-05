@@ -13,7 +13,7 @@
     "parserOptions": {
         "parser": "@typescript-eslint/parser",
         "sourceType": "module",
-        "project": "./tsconfig.eslint.json"
+        "project": "./tsconfig.json"
     },
     "plugins": [
         "vue"

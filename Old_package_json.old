@@ -65,5 +65,10 @@
   },
   "engines": {
     "node": "12.x"
+  },
+  "// ****** module-alias. Pacote para mapear o @diretorio que é usado no TypeScript, ",
+  "//"  para gerar corretamente no build do JavaScript. ****** ",
+  "_moduleAliases": {
+    "@": "dist"
   }
 }
