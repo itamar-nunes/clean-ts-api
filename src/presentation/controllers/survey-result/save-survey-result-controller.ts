@@ -1,0 +1,15 @@
+import { Controller, HttpRequest, HttpResponse, LoadSurveyById } from './save-survey-result-controller-protocols'
+import { ok, serverError } from '@/presentation/helpers/http/http-helper'
+
+export class SaveSurveyResultController implements Controller {
+  constructor (private readonly loadSurveyById: LoadSurveyById) {}
+
+  async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
+    try {
+      const survey = await this.loadSurveyById.loadById(httpRequest.params.surveyId)
+      return ok(survey)
+    } catch (error) {
+      return serverError(error)
+    }
+  }
+}
