@@ -1,8 +1,8 @@
-export type AuthenticationModel = {
+export type AuthenticationDTO = {
   email: string
   password: string
 }
 
 export interface Authentication {
-  auth (authentication: AuthenticationModel): Promise<string>
+  auth (authentication: AuthenticationDTO): Promise<string>
 }
